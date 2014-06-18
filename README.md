@@ -4,7 +4,7 @@
 
 An Ansible Role that installs Sonar Runner on RedHat/CentOS and Debian/Ubuntu Linux servers.
 
-At this time, the role is only configured to support SonarQube installations using MySQL as a database backend.
+The role is currently configured to support SonarQube installations using MySQL as a database backend.
 
 ## Requirements
 
