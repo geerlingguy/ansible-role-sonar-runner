@@ -36,6 +36,7 @@ The SonarQube installation login (if configured).
 
     sonar_mysql_host: localhost
     sonar_mysql_port: 3306
+    sonar_mysql_database: sonar
     sonar_mysql_user: sonar
     sonar_mysql_password: sonar
 

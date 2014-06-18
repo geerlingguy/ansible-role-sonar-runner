@@ -5,7 +5,7 @@
 sonar.host.url=http://{{ sonar_host }}:{{ sonar_port }}
 
 #----- MySQL
-sonar.jdbc.url=jdbc:mysql://{{ sonar_mysql_host }}:{{ sonar_mysql_port }}/sonar?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+sonar.jdbc.url=jdbc:mysql://{{ sonar_mysql_host }}:{{ sonar_mysql_port }}/{{ sonar_mysql_database }}?autoReconnect=true&useUnicode=true&characterEncoding=utf8
 
 #----- Global database settings
 sonar.jdbc.username={{ sonar_mysql_user }}
