@@ -1,0 +1,20 @@
+---
+workspace: /root
+
+sonar_runner_download_url: http://repo1.maven.org/maven2/org/codehaus/sonar/runner/sonar-runner-dist/2.3/sonar-runner-dist-2.3.zip
+sonar_runner_download_file: sonar-runner-dist-2.3.zip
+sonar_runner_expanded_file: sonar-runner-2.3
+
+# The SonarQube host to which sonar-runner will connect.
+sonar_host: localhost
+sonar_port: 9000
+
+# Optional login (if forceAuthentication is true) for SonarQube.
+sonar_login: ""
+sonar_password: ""
+
+# MySQL database connection details.
+sonar_mysql_host: localhost
+sonar_mysql_port: 3306
+sonar_mysql_user: sonar
+sonar_mysql_password: sonar

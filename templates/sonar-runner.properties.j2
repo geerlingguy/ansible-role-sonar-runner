@@ -1,0 +1,21 @@
+# Configure here general information about the environment, such as SonarQube DB
+# details. No information about specific projects should appear here.
+
+#----- Default SonarQube server
+sonar.host.url=http://{{ sonar_host }}:{{ sonar_port }}
+
+#----- MySQL
+sonar.jdbc.url=jdbc:mysql://{{ sonar_mysql_host }}:{{ sonar_mysql_port }}/sonar?autoReconnect=true&useUnicode=true&characterEncoding=utf8
+
+#----- Global database settings
+sonar.jdbc.username={{ sonar_mysql_user }}
+sonar.jdbc.password={{ sonar_mysql_password }}
+
+#----- Default source code encoding
+sonar.sourceEncoding=UTF-8
+
+{% if sonar_login and sonar_password %}
+#----- Security (when 'sonar.forceAuthentication' is set to 'true')
+sonar.login={{ sonar_login }}
+sonar.password={{ sonar_password }}
+{% endif %}
