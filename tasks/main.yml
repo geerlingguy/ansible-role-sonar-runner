@@ -1,16 +1,16 @@
 ---
-# Install SonarQube Runner.
 - name: Download sonar-runner.
-  get_url: >
-    url={{ sonar_runner_download_url }}
-    dest={{ workspace }}/{{ sonar_runner_download_file }}
+  get_url:
+    url: "{{ sonar_runner_download_url }}"
+    dest: "{{ workspace }}/{{ sonar_runner_download_file }}"
 
 - name: Unzip sonar-runner.
-  shell: >
-    chdir={{ workspace }}
-    unzip {{ sonar_runner_download_file }}
-    creates=/usr/local/sonar-runner/bin/sonar-runner
-  sudo: yes
+  unarchive:
+    src: "{{ workspace }}/{{ sonar_runner_download_file }}"
+    dest: "{{ workspace }}"
+    copy: no
+    creates: /usr/local/sonar-runner/bin/sonar-runner
+  become: yes
 
 - name: Move sonar-runner into place.
   shell: >
@@ -18,11 +18,11 @@
     creates=/usr/local/sonar-runner/bin/sonar-runner
 
 - name: Copy sonar-runner properties into place.
-  template: >
-    src=sonar-runner.properties.j2
-    dest=/usr/local/sonar-runner/conf/sonar-runner.properties
+  template:
+    src: sonar-runner.properties.j2
+    dest: /usr/local/sonar-runner/conf/sonar-runner.properties
 
 - name: Configure sonar-runner bash settings by copying script into profile.d.
-  copy: >
-    src=sonar.sh
-    dest=/etc/profile.d/sonar.sh
+  copy:
+    src: sonar.sh
+    dest: /etc/profile.d/sonar.sh
