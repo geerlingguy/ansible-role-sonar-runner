@@ -2,7 +2,7 @@
 # details. No information about specific projects should appear here.
 
 #----- Default SonarQube server
-sonar.host.url=http://{{ sonar_host }}:{{ sonar_port }}
+sonar.host.url={{ sonar_protocol }}://{{ sonar_host }}:{{ sonar_port }}
 
 #----- MySQL
 sonar.jdbc.url=jdbc:mysql://{{ sonar_mysql_host }}:{{ sonar_mysql_port }}/{{ sonar_mysql_database }}?autoReconnect=true&useUnicode=true&characterEncoding=utf8
