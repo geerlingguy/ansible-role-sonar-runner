@@ -24,6 +24,7 @@ Directory where downloaded files will be temporarily stored.
 
 URL and filenames for sonar distribution/version.
 
+    sonar_protocol: http
     sonar_host: localhost
     sonar_port: 9000
 
