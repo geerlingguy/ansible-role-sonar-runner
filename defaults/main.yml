@@ -6,6 +6,7 @@ sonar_runner_download_file: sonar-runner-dist-2.3.zip
 sonar_runner_expanded_file: sonar-runner-2.3
 
 # The SonarQube host to which sonar-runner will connect.
+sonar_protocol: http
 sonar_host: localhost
 sonar_port: 9000
 
