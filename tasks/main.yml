@@ -1,4 +1,7 @@
 ---
+- name: Ensure unzip is installed.
+  package: name=unzip state=installed
+
 - name: Download and expand sonar-runner.
   unarchive:
     src: "{{ sonar_runner_download_url }}"
