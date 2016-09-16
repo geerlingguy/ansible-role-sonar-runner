@@ -1,12 +1,7 @@
 ---
-- name: Download sonar-runner.
-  get_url:
-    url: "{{ sonar_runner_download_url }}"
-    dest: "{{ workspace }}/{{ sonar_runner_download_file }}"
-
-- name: Unzip sonar-runner.
+- name: Download and expand sonar-runner.
   unarchive:
-    src: "{{ workspace }}/{{ sonar_runner_download_file }}"
+    src: "{{ sonar_runner_download_url }}"
     dest: "{{ workspace }}"
     copy: no
     creates: /usr/local/sonar-runner/bin/sonar-runner
