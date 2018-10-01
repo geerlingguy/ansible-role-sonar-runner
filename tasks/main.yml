@@ -6,12 +6,12 @@
   unarchive:
     src: "{{ sonar_runner_download_url }}"
     dest: "{{ workspace }}"
-    copy: no
+    copy: false
     creates: /usr/local/sonar-runner/bin/sonar-runner
-  become: yes
+  become: true
 
 - name: Move sonar-runner into place.
-  shell: >
+  command: >
     mv {{ workspace }}/{{ sonar_runner_expanded_file }} /usr/local/sonar-runner
     creates=/usr/local/sonar-runner/bin/sonar-runner
 
