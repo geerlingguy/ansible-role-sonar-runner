@@ -18,7 +18,7 @@ Available variables are listed below, along with default values:
 
 Directory where downloaded files will be temporarily stored.
 
-    sonar_runner_download_url: http://repo1.maven.org/maven2/org/codehaus/sonar/runner/sonar-runner-dist/2.3/sonar-runner-dist-2.3.zip
+    sonar_runner_download_url: https://repo1.maven.org/maven2/org/codehaus/sonar/runner/sonar-runner-dist/2.3/sonar-runner-dist-2.3.zip
     sonar_runner_download_file: sonar-runner-dist-2.3.zip
     sonar_runner_expanded_file: sonar-runner-2.3
 
