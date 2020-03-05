@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/geerlingguy/ansible-role-sonar-runner.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-sonar-runner)
 
+> **DEPRECATED**: This role is no longer actively maintained. It may still work, but I have marked it as 'deprecated' on Ansible Galaxy, and recommend you find a new role to replace it, or fork it and use your fork.
+
 An Ansible Role that installs Sonar Runner on RedHat/CentOS and Debian/Ubuntu Linux servers.
 
 The role is currently configured to support SonarQube installations using MySQL as a database backend.
